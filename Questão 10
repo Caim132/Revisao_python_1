@@ -1,0 +1,36 @@
+import random
+
+# Solicita ao usuário que escolha entre Pedra, Papel ou Tesoura
+print("Escolha uma opção:")
+print("1. Pedra")
+print("2. Papel")
+print("3. Tesoura")
+
+opcoes = ["Pedra", "Papel", "Tesoura"]
+escolha_usuario = int(input("Digite o número correspondente à sua escolha: "))
+
+# Verifica se a escolha do usuário é válida
+if escolha_usuario not in [1, 2, 3]:
+    print("Escolha inválida. Por favor, escolha um número entre 1 e 3.")
+else:
+    # Converte a escolha do usuário em uma string
+    escolha_usuario = opcoes[escolha_usuario - 1]
+
+    # Escolha aleatória do computador
+    escolha_computador = random.choice(opcoes)
+
+    # Exibe as escolhas do usuário e do computador
+    print(f"Você escolheu: {escolha_usuario}")
+    print(f"O computador escolheu: {escolha_computador}")
+
+    # Determina o vencedor
+    if escolha_usuario == escolha_computador:
+        print("Empate!")
+    elif (
+        (escolha_usuario == "Pedra" and escolha_computador == "Tesoura") or
+        (escolha_usuario == "Papel" and escolha_computador == "Pedra") or
+        (escolha_usuario == "Tesoura" and escolha_computador == "Papel")
+    ):
+        print("Você venceu!")
+    else:
+        print("O computador venceu!")
