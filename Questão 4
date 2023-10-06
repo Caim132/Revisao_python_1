@@ -1,0 +1,24 @@
+# Solicita ao usuário que insira a lista de números separados por espaços
+entrada = input("Digite uma lista de números separados por espaços: ")
+
+# Divide a entrada em uma lista de números
+numeros = [int(x) for x in entrada.split()]
+
+# Verifica se a lista está vazia
+if len(numeros) == 0:
+    print("A lista está vazia. Não há valores para encontrar o maior e o menor.")
+else:
+    # Inicializa as variáveis para o maior e o menor valor
+    maior_valor = numeros[0]
+    menor_valor = numeros[0]
+
+    # Itera através da lista de números para encontrar o maior e o menor
+    for numero in numeros:
+        if numero > maior_valor:
+            maior_valor = numero
+        if numero < menor_valor:
+            menor_valor = numero
+
+    # Exibe o maior e o menor valor
+    print(f"O maior valor na lista é: {maior_valor}")
+    print(f"O menor valor na lista é: {menor_valor}")
