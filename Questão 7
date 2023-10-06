@@ -1,0 +1,14 @@
+# Solicita ao usuário que insira um valor limite para a sequência de Fibonacci
+limite = int(input("Digite um valor limite para a sequência de Fibonacci: "))
+
+# Inicializa os primeiros dois números da sequência de Fibonacci
+fibonacci = [0, 1]
+
+# Calcula e imprime a sequência de Fibonacci até o limite
+while fibonacci[-1] + fibonacci[-2] <= limite:
+    proximo_numero = fibonacci[-1] + fibonacci[-2]
+    fibonacci.append(proximo_numero)
+
+# Exibe a sequência de Fibonacci
+print("Sequência de Fibonacci até", limite, ":")
+print(fibonacci)
