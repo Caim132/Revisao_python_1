@@ -1,0 +1,8 @@
+# Solicita ao usuário que insira um número
+numero = int(input("Digite um número: "))
+
+# Verifica e imprime todos os números pares de 0 até o número inserido
+print("Números pares de 0 até", numero, ":")
+
+for i in range(0, numero + 1, 2):
+    print(i)
