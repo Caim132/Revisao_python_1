@@ -1,0 +1,22 @@
+# Solicita ao usuário que insira a lista de números separados por espaços
+entrada = input("Digite uma lista de números separados por espaços: ")
+
+# Divide a entrada em uma lista de números
+numeros = [int(x) for x in entrada.split()]
+
+# Inicializa variáveis para contar e somar os números pares
+soma_pares = 0
+contador_pares = 0
+
+# Itera através da lista de números
+for numero in numeros:
+    if numero % 2 == 0:
+        soma_pares += numero
+        contador_pares += 1
+
+# Calcula a média dos números pares (evita a divisão por zero)
+if contador_pares > 0:
+    media_pares = soma_pares / contador_pares
+    print(f"A média dos números pares na lista é: {media_pares}")
+else:
+    print("Não há números pares na lista.")
