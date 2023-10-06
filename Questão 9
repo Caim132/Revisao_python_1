@@ -1,0 +1,13 @@
+# Solicita ao usuário que insira uma lista de nomes separados por espaços
+entrada = input("Digite uma lista de nomes separados por espaços: ")
+
+# Divide a entrada em uma lista de nomes
+nomes = entrada.split()
+
+# Filtra os nomes que começam com a letra 'A'
+nomes_com_a = [nome for nome in nomes if nome.startswith('A') or nome.startswith('a')]
+
+# Exibe a nova lista de nomes
+print("Nomes que começam com a letra 'A':")
+for nome in nomes_com_a:
+    print(nome)
